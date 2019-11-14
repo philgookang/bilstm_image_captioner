@@ -13,7 +13,7 @@ $ cd simple_bilstm_model
 ```
 
 **2. Train the model**  
-To train the model yourself, run the following code. If you want to use a pretrained model, go direction to setp 3.  
+To train the model yourself, run the following code. If you want to use a pretrained model, go direction to step 3.  
 ```
 $ python train.py
 ```
