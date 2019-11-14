@@ -1,5 +1,5 @@
-# Simple Bidirection LSTM model
-Genereate/predict a sentence using a Bidirectionl based LSTM model.
+# Simple Bidirectional LSTM model
+Genereate/predict a sentence using a Bidirectionl LSTM model.
 
 # Dependencies  
 For this simple code, we only need pytorch, numpy, and [visdom](https://github.com/facebookresearch/visdom). No other libraries required!  
