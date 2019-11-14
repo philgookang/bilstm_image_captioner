@@ -45,13 +45,13 @@ if __name__ == "__main__":
     # ########################
 
     # training hyper parameters
-    num_epochs = 20
+    num_epochs = 30
 
     # training progress output (how often to print to screen)
     progress_output = 5
 
     # training batch size (how many to train at once before backpropagation)
-    batch_size = 1
+    batch_size = 2
 
     # learning rate (the amoutn of the error in be reflected on the model)
     learning_rate = 0.001 # the most common default value
