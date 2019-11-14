@@ -4,19 +4,14 @@ import numpy as np
 import torchvision
 
 from data import load_dataset
-from config import model_name, device
+from config import model_name, device, input_size, hidden_size, max_seg_length
 
 class BiLSTM(nn.Module):
 
     def __init__(self, c_size):
         super(BiLSTM, self).__init__()
-
-        iSize = 64
-        hSize = 512
-        self.max_seg_length = 30
-
-        self.embed = nn.Embedding(c_size, iSize)
-        self.lstm = nn.LSTM(input_size=iSize, hidden_size=hSize, num_layers=1, bias=True, batch_first=True, bidirectional=True)
+        self.embed = nn.Embedding(c_size, input_size)
+        self.lstm = nn.LSTM(input_size=input_size, hidden_size=hidden_size, num_layers=1, bias=True, batch_first=True, bidirectional=True)
         self.linear = nn.Linear(hSize * 2, c_size)
         self.softmax = nn.Softmax()
 
@@ -33,7 +28,7 @@ class BiLSTM(nn.Module):
         corpus, word_to_idx, idx_to_word, train_dataset = load_dataset()
 
         sampled_ids = []
-        for i in range(10):
+        for i in range(max_seg_length):
             inputs = self.embed(features)
             hiddens, states = self.lstm(inputs, states)
             out1, out2 = torch.chunk(hiddens, 2, dim=2)
