@@ -215,7 +215,7 @@ def test(model_name, input_string):
 
 if __name__ == "__main__":
 
-    model_name = "bilst_model.pt"
+    model_name = "train_model_features.pt"
     mode = "test" # mode: train or test
 
     if  mode == "train":
