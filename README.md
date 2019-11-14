@@ -8,7 +8,7 @@ We use visdom to graph our loss value during training as seen in the picture bel
 # How To Use
 **1. Clone git**
 ```
-$ git clone httpshttps://github.com/philgookang/simple_bilstm_model.git
+$ git clone https://github.com/philgookang/simple_bilstm_model.git
 $ cd simple_bilstm_model
 ```
 
