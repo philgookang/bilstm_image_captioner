@@ -8,12 +8,11 @@ from config import model_name, device, input_size, hidden_size, max_seg_length
 
 class BiLSTM(nn.Module):
 
-    def __init__(self, c_size):
+    def __init__(self, corpus_size):
         super(BiLSTM, self).__init__()
-        self.embed = nn.Embedding(c_size, input_size)
+        self.embed = nn.Embedding(corpus_size, input_size)
         self.lstm = nn.LSTM(input_size=input_size, hidden_size=hidden_size, num_layers=1, bias=True, batch_first=True, bidirectional=True)
-        self.linear = nn.Linear(hSize * 2, c_size)
-        self.softmax = nn.Softmax()
+        self.linear = nn.Linear(hidden_size * 2, corpus_size)
 
     def forward(self, caption):
         embeddings = self.embed(caption)
