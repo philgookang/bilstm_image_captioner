@@ -10,7 +10,7 @@ from config import model_name, device
 if __name__ == "__main__":
 
     # the string to test!
-    test_string = "<s> john"
+    test_string = "<s> john can"
 
     # ########################
     # LOAD DATASET
