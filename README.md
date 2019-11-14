@@ -2,7 +2,7 @@
 Genereate/predict a sentence using a Bidirectionl based LSTM model.
 
 # Dependencies  
-For this simple code, we only need pytorch, numpy, and visdom. No other libraries required!  
+For this simple code, we only need pytorch, numpy, and [visdom](https://github.com/facebookresearch/visdom). No other libraries required!  
 We use visdom to graph our loss value during training as seen in the picture below!
 
 # How To Use
